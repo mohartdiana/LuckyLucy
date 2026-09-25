@@ -1,0 +1,53 @@
+<header>
+    <div class="logo">LuckyLucy Coffee</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="seasonal.html">Сезонное</a></li>
+            <li><a href="desserts.html">Десерты</a></li>
+            <li><a href="order.html" class="active">Заказать</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="container">
+    <h2 class="section-title">Оформить заказ</h2>
+    
+    <form class="order-form" onsubmit="event.preventDefault(); alert('Спасибо! Ваш заказ принят. Мы свяжемся с вами для подтверждения.');">
+        <div class="form-group">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" placeholder="Иван" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+        </div>
+
+        <div class="form-group">
+            <label for="order-type">Тип заказа:</label>
+            <select id="order-type" name="order-type" required>
+                <option value="now">Забрать сейчас (как можно скорее)</option>
+                <option value="time">Забрать к определенному времени</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="time">Желаемое время (если выбрано "к времени"):</label>
+            <input type="time" id="time" name="time">
+        </div>
+
+        <div class="form-group">
+            <label for="comment">Комментарий к заказу (пожелания):</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Например: без сахара, с собой..."></textarea>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%;">Оформить заказ</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2024 LuckyLucy Coffee. Все права защищены.</p>
+    <p>г. Москва, ул. Кофейная, д. 1 | +7 (999) 123-45-67</p>
+</footer>
